@@ -1,0 +1,20 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "/Volumes/WORK/ProjectByDuc/BaseNodeJs/logs/.7f1b131be822af7d0922dae123b007d16312e94d-audit.json",
+    "files": [
+        {
+            "date": 1700884548731,
+            "name": "/Volumes/WORK/ProjectByDuc/BaseNodeJs/logs/app-2023-11-25-10.log",
+            "hash": "45bf443441fe8a7db5f58e7b746a6274bae28b4d06bf1107178803fbd84530de"
+        },
+        {
+            "date": 1700885227948,
+            "name": "/Volumes/WORK/ProjectByDuc/BaseNodeJs/logs/app-2023-11-25-11.log",
+            "hash": "d10424333aada4c2759c49886cc76d5fd16640684190c0ed7e713df374935385"
+        }
+    ],
+    "hashType": "sha256"
+}

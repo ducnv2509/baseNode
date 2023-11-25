@@ -2,10 +2,12 @@
   "compilerOptions": {
     "module": "NodeNext", // Quy định output module được sử dụng
     "moduleResolution": "NodeNext",
-    "target": "ES2022", // Target output cho code
+    "target": "es2016",
     "outDir": "build", // Đường dẫn output cho thư mục build
     "esModuleInterop": true,
     "strict": true /* Enable all strict type-checking options. */,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
     "skipLibCheck": true /* Skip type checking all .d.ts files. */,
     "baseUrl": ".", // Đường dẫn base cho các import
     "paths": {

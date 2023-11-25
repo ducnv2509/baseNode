@@ -1,0 +1,61 @@
+2023-11-25 11:07:08.690 [info][service:student]: Connected to mongo
+2023-11-25 11:07:08.694 [info][service:student]: Listening on: 0.0.0.0:3000
+2023-11-25 11:07:46.699 [info][service:student][request]: {"request_id":"30c1fdb0-8b48-11ee-b5da-45c8ee0cb568","correlation_id":"30c1fdb1-8b48-11ee-b5da-45c8ee0cb568","request_time":"2023-11-25T04:07:46.698Z","requester":"127.0.0.1","method":"POST","url":"/api/v1/students","body":{"name":"ducnv","age":12,"dob":"25-09-2002"}}
+2023-11-25 11:07:46.714 [error][service:student]: Error: Auto validation failed: dob: Cast to date failed for value "25-09-2002" (type string) at path "dob"
+    at ValidationError.inspect (/Volumes/WORK/ProjectByDuc/BaseNodeJs/node_modules/mongoose/lib/error/validation.js:50:26)
+    at formatValue (node:internal/util/inspect:805:19)
+    at inspect (node:internal/util/inspect:364:10)
+    at formatWithOptionsInternal (node:internal/util/inspect:2213:25)
+    at Object.format (node:internal/util/inspect:2136:10)
+    at Splatter._splat (/Volumes/WORK/ProjectByDuc/BaseNodeJs/node_modules/logform/splat.js:71:25)
+    at Splatter.transform (/Volumes/WORK/ProjectByDuc/BaseNodeJs/node_modules/logform/splat.js:119:19)
+    at Format.transform (/Volumes/WORK/ProjectByDuc/BaseNodeJs/node_modules/logform/combine.js:20:24)
+    at DerivedLogger._transform (/Volumes/WORK/ProjectByDuc/BaseNodeJs/node_modules/winston/lib/winston/logger.js:313:29)
+    at DerivedLogger.Transform._read (/Volumes/WORK/ProjectByDuc/BaseNodeJs/node_modules/readable-stream/lib/_stream_transform.js:166:10) {
+  errors: {
+    dob: CastError: Cast to date failed for value "25-09-2002" (type string) at path "dob"
+        at SchemaDate.cast (/Volumes/WORK/ProjectByDuc/BaseNodeJs/node_modules/mongoose/lib/schema/date.js:376:11)
+        at SchemaDate.SchemaType.applySetters (/Volumes/WORK/ProjectByDuc/BaseNodeJs/node_modules/mongoose/lib/schemaType.js:1219:12)
+        at model.$set (/Volumes/WORK/ProjectByDuc/BaseNodeJs/node_modules/mongoose/lib/document.js:1416:22)
+        at model.$set (/Volumes/WORK/ProjectByDuc/BaseNodeJs/node_modules/mongoose/lib/document.js:1115:16)
+        at model.Document (/Volumes/WORK/ProjectByDuc/BaseNodeJs/node_modules/mongoose/lib/document.js:166:12)
+        at model.Model (/Volumes/WORK/ProjectByDuc/BaseNodeJs/node_modules/mongoose/lib/model.js:125:12)
+        at new model (/Volumes/WORK/ProjectByDuc/BaseNodeJs/node_modules/mongoose/lib/model.js:4602:15)
+        at /Volumes/WORK/ProjectByDuc/BaseNodeJs/src/controller/student.controller.ts:7:21
+        at Generator.next (<anonymous>)
+        at /Volumes/WORK/ProjectByDuc/BaseNodeJs/src/controller/student.controller.ts:8:71 {
+      stringValue: '"25-09-2002"',
+      messageFormat: undefined,
+      kind: 'date',
+      value: '25-09-2002',
+      path: 'dob',
+      reason: AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+      
+        assert.ok(false)
+      
+          at castDate (/Volumes/WORK/ProjectByDuc/BaseNodeJs/node_modules/mongoose/lib/cast/date.js:40:10)
+          at SchemaDate.cast (/Volumes/WORK/ProjectByDuc/BaseNodeJs/node_modules/mongoose/lib/schema/date.js:374:12)
+          at SchemaDate.SchemaType.applySetters (/Volumes/WORK/ProjectByDuc/BaseNodeJs/node_modules/mongoose/lib/schemaType.js:1219:12)
+          at model.$set (/Volumes/WORK/ProjectByDuc/BaseNodeJs/node_modules/mongoose/lib/document.js:1416:22)
+          at model.$set (/Volumes/WORK/ProjectByDuc/BaseNodeJs/node_modules/mongoose/lib/document.js:1115:16)
+          at model.Document (/Volumes/WORK/ProjectByDuc/BaseNodeJs/node_modules/mongoose/lib/document.js:166:12)
+          at model.Model (/Volumes/WORK/ProjectByDuc/BaseNodeJs/node_modules/mongoose/lib/model.js:125:12)
+          at new model (/Volumes/WORK/ProjectByDuc/BaseNodeJs/node_modules/mongoose/lib/model.js:4602:15)
+          at /Volumes/WORK/ProjectByDuc/BaseNodeJs/src/controller/student.controller.ts:7:21
+          at Generator.next (<anonymous>) {
+        generatedMessage: true,
+        code: 'ERR_ASSERTION',
+        actual: false,
+        expected: true,
+        operator: '=='
+      },
+      valueType: 'string'
+    }
+  },
+  _message: 'Auto validation failed'
+}
+2023-11-25 11:07:46.714 [info][service:student][response]: {"request_id":"30c1fdb0-8b48-11ee-b5da-45c8ee0cb568","correlation_id":"30c1fdb1-8b48-11ee-b5da-45c8ee0cb568","response_time":"2023-11-25T04:07:46.714Z","status_code":500,"body":{"code":"INTERNAL_SERVER_ERROR","description":"Đã có lỗi xẩy ra, xin vui lòng thử lại sau.","errors":[{"location":"ValidationError","message":"Auto validation failed: dob: Cast to date failed for value \"25-09-2002\" (type string) at path \"dob\"","value":["ValidationError: Auto validation failed: dob: Cast to date failed for value \"25-09-2002\" (type string) at path \"dob\"","at model.Document.invalidate (/Volumes/WORK/ProjectByDuc/BaseNodeJs/node_modules/mongoose/lib/document.js:3187:32)","at model.$set (/Volumes/WORK/ProjectByDuc/BaseNodeJs/node_modules/mongoose/lib/document.js:1458:12)","at model.$set (/Volumes/WORK/ProjectByDuc/BaseNodeJs/node_modules/mongoose/lib/document.js:1115:16)","at model.Document (/Volumes/WORK/ProjectByDuc/BaseNodeJs/node_modules/mongoose/lib/document.js:166:12)","at model.Model (/Volumes/WORK/ProjectByDuc/BaseNodeJs/node_modules/mongoose/lib/model.js:125:12)","at new model (/Volumes/WORK/ProjectByDuc/BaseNodeJs/node_modules/mongoose/lib/model.js:4602:15)","at /Volumes/WORK/ProjectByDuc/BaseNodeJs/src/controller/student.controller.ts:7:21","at Generator.next (<anonymous>)","at /Volumes/WORK/ProjectByDuc/BaseNodeJs/src/controller/student.controller.ts:8:71","at new Promise (<anonymous>)"]}]}}
+2023-11-25 11:08:18.217 [info][service:student]: Connected to mongo
+2023-11-25 11:08:18.226 [info][service:student]: Listening on: 0.0.0.0:3000
+2023-11-25 11:08:19.365 [info][service:student][request]: {"request_id":"443a4640-8b48-11ee-a986-e1f301cc7aa6","correlation_id":"443a4641-8b48-11ee-a986-e1f301cc7aa6","request_time":"2023-11-25T04:08:19.364Z","requester":"127.0.0.1","method":"POST","url":"/api/v1/students","body":{"name":"ducnv","age":12}}
+2023-11-25 11:08:19.491 [info][service:student][response]: {"request_id":"443a4640-8b48-11ee-a986-e1f301cc7aa6","correlation_id":"443a4641-8b48-11ee-a986-e1f301cc7aa6","response_time":"2023-11-25T04:08:19.491Z","status_code":201,"body":{"id":"443a9460-8b48-11ee-a986-e1f301cc7aa6","name":"ducnv","age":12,"dob":"2023-11-25T04:08:19.366Z","_id":"65617333bfed9a734d054ad1"}}
